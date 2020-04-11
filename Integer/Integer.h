@@ -1,5 +1,5 @@
 #pragma once
-
+#include <iostream>
 
 class Integer{
 	int mynum_;
@@ -8,27 +8,30 @@ public:
 	Integer();
 	Integer(int num);
 	Integer(const Integer& num);
-//destructor
-	~Integer();	
+
+
 //operadores basicos
-	void operator=(const Integer& num);
-	void operator+=(const Integer& adder);
-	Integer operator+(const Integer& a);
-	Integer operator-(const Integer& a);
+	void operator=(int num);
+	void operator+=(int adder);
+	Integer operator+(int a);
+	Integer operator-(int a);
 	Integer operator-();
-	void operator-=(const Integer& sus);
-	Integer operator*(const Integer& a);
-	void operator*=(const Integer& mul);
-	Integer operator/(const Integer& a);
+	void operator-=(int sus);
+	Integer operator*(int a);
+	void operator*=(int mul);
+	Integer operator/(int a);
 //potenciacion
-	Integer operator^(const Integer& b);
+	int operator^(int b);
 //comparaciones logicas
-	bool operator>(const Integer& a);
-	bool operator<(const Integer& a);
-	bool operator<=(const Integer& a);
-	bool operator>=(const Integer& a);
-	bool operator!=(const Integer& a);
-	bool operator==(const Integer& a);
+	bool operator>(int a);
+	bool operator<(int a);
+	bool operator<=(int a);
+	bool operator>=(int a);
+	bool operator!=(int a);
+	bool operator==(int a);
 //my functions
-	bool isMultOf(const Integer& a);
+	bool isMultOf(int a);
+	int getMyNum(const Integer& num);
+//ostream
+	friend std::ostream& operator<<(std::ostream& os, const Integer& num);
 };

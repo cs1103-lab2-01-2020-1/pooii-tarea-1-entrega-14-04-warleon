@@ -1,67 +1,73 @@
 #include "Integer.h"
 
-Integer::Integer(){Integer(0);}
-Integer::Integer(int num){(this->mynum_)=num;}
-Integer::Integer(const Integer& num){Integer(num.mynum_);}
-Integer::~Integer(){delete this;}
+Integer::Integer():mynum_{}{}
+Integer::Integer(int num):mynum_{num}{}
+Integer::Integer(const Integer& num):mynum_{num.mynum_}{}
 
-Integer Integer::operator+(const Integer& a){
-	Integer res(a.mynum_ + this->mynum_);
+
+Integer Integer::operator+(int a){
+	Integer res(mynum_ + a);
 	return res;
 }
 
-void Integer::operator+=(const Integer& adder){(this->mynum_)+=(adder.mynum_);}
+void Integer::operator+=(int adder){mynum_+=adder;}
 
-void Integer::operator=(const Integer& num){(this->mynum_)=(num.mynum_);}
+void Integer::operator=(int num){mynum_=num;}
 	
-Integer Integer::operator-(const Integer& a){
-	Integer res(a.mynum_ - this->mynum_);
+Integer Integer::operator-(int a){
+	Integer res(mynum_-a);
 	return res;
 }
 
-void Integer::operator-=(const Integer& sus){(this->mynum_)-=(sus.mynum_);}
+void Integer::operator-=(int sus){mynum_-=sus;}
 
 
-Integer Integer::operator*(const Integer& a){
-	Integer res(a.mynum_ * this->mynum_);
+Integer Integer::operator*(int a){
+	Integer res(a * mynum_);
 	return res;
 }
 
-void Integer::operator*=(const Integer& mul){(this->mynum_)*=(mul.mynum_);}
+void Integer::operator*=(int mul){mynum_*=mul;}
 
-Integer Integer::operator/(const Integer& a){
-	Integer res(a.mynum_ / this->mynum_);
+Integer Integer::operator/(int a){
+	Integer res(mynum_ / a);
 	return res;
 }
 
 //stand by 
-Integer Integer::operator^(const Integer& b){
-	if(b==Integer(0)) return Integer(1);
-	Integer y();
+int Integer::operator^(int b){
+	if(b==0) return 1;
+	int y;
 
-	if(b>Integer(0)){
-		if(b.isMultOf(Integer(2))){
-		y=(*this)^(b/(Integer(2)));
+	if(b>0){
+		if(b%2==0){
+		y=(*this)^(b/2);
 		return y*y;
 		}
 		else{
-		y=(*this)^(b-(Integer(1)));
-		return (*this)*(y);
+		y=(*this)^(b-1);
+		return getMyNum((*this)*y);
 		}
 	}
-	if(b<Integer(0)){
+	if(b<0){
 		y=(*this)^(-b);
-		return Integer(1)/y;
+		return 1/y;
 	}
 }
 
-bool Integer::isMultOf(const Integer& a){return (this->mynum_)%(a.mynum_) == 0;}
+bool Integer::isMultOf(int a){return mynum_%a == 0;}
 
-Integer Integer::operator-(){return -(this->mynum_);}
+Integer Integer::operator-(){return -1*mynum_;}
 
-bool Integer::operator>(const Integer& a){return this->mynum_>a.mynum_;}
-bool Integer::operator<(const Integer& a){return this->mynum_<a.mynum_;}
-bool Integer::operator<=(const Integer& a){return this->mynum_<=a.mynum_;}
-bool Integer::operator>=(const Integer& a){return this->mynum_>=a.mynum_;}
-bool Integer::operator!=(const Integer& a){return this->mynum_!=a.mynum_;}
-bool Integer::operator==(const Integer& a){return this->mynum_==a.mynum_;}
+bool Integer::operator>(int a){return mynum_>a;}
+bool Integer::operator<(int a){return mynum_<a;}
+bool Integer::operator<=(int a){return mynum_<=a;}
+bool Integer::operator>=(int a){return mynum_>=a;}
+bool Integer::operator!=(int a){return mynum_!=a;}
+bool Integer::operator==(int a){return mynum_==a;}
+int Integer::getMyNum(const Integer& num){return num.mynum_;}
+
+std::ostream& operator<<(std::ostream& os, const Integer& num){
+	os<<num.mynum_;
+	return os;
+}
