@@ -34,4 +34,6 @@ public:
 	int getMyNum(const Integer& num);
 //ostream
 	friend std::ostream& operator<<(std::ostream& os, const Integer& num);
+//cast
+	operator int();
 };

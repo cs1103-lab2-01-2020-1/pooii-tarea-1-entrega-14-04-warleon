@@ -71,3 +71,5 @@ std::ostream& operator<<(std::ostream& os, const Integer& num){
 	os<<num.mynum_;
 	return os;
 }
+
+Integer::operator int(){return mynum_;}

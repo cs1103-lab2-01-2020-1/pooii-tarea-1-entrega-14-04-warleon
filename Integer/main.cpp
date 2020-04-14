@@ -10,6 +10,14 @@ int main(){
 	cout<<b<<endl;
 	cout<<(a^2)<<endl;
 	cout<<(a^3)<<endl;
+	
+	cout<<(a==5)<<endl;
+	cout<<(a!=5)<<endl;
+	cout<<(a<=5)<<endl;
+	cout<<(a>=5)<<endl;
+	cout<<(a<5)<<endl;
+	cout<<(a>5)<<endl;
+	cout<<(a*5)<<endl;
 
 	return 0;
 }
