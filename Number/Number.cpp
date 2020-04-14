@@ -96,3 +96,6 @@ T operator^(const T& num){
 	}
 }
 */
+
+template<typename T>
+Number<T>::operator T(){return Number_;}

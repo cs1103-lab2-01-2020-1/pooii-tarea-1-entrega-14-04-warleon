@@ -14,48 +14,37 @@ public:
 	void operator++();
 	void operator--();
 
-	template<typename U>
-	T operator+(const U& num);
+	T operator+(const T& num);
 
-	template<typename U>
-	T operator-(const U& num);
+	T operator-(const T& num);
 	
-	template<typename U>
-	T operator*(const U& num);
+	T operator*(const T& num);
 	
-	template<typename U>
-	void operator+=(const U& num);
+	void operator+=(const T& num);
 	
-	template<typename U>
-	void operator-=(const U& num);
+	void operator-=(const T& num);
 	
-	template<typename U>
-	void operator*=(const U& num);
+	void operator*=(const T& num);
 	
-	template<typename U>
-	T operator/(const U& num);
+	T operator/(const T& num);
 //logical operators
 	
-	template<typename U>
-	bool operator==(const U& num);
+	bool operator==(const T& num);
 	
-	template<typename U>
-	bool operator!=(const U& num);
+	bool operator!=(const T& num);
 	
-	template<typename U>
-	bool operator<=(const U& num);
+	bool operator<=(const T& num);
 	
-	template<typename U>
-	bool operator>=(const U& num);
+	bool operator>=(const T& num);
 	
-	template<typename U>
-	bool operator<(const U& num);
+	bool operator<(const T& num);
 	
-	template<typename U>
-	bool operator>(const U& num);
+	bool operator>(const T& num);
 //extra operators
 //	T operator^(const T& num);
 //output
 	template<typename U>
 	friend std::ostream& operator<<(std::ostream& os,const Number<U>& num);
+//cast
+	operator T();
 };
