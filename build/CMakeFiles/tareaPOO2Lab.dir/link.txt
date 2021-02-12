@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/tareaPOO2Lab.dir/src/main.cpp.o  -o tareaPOO2Lab 

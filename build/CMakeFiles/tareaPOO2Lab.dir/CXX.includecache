@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/anthony/Escritorio/repositorios/pooii-tarea-1-entrega-14-04-warleon/src/Integer/Integer.cpp
+Integer.h
+/home/anthony/Escritorio/repositorios/pooii-tarea-1-entrega-14-04-warleon/src/Integer/Integer.h
+
+/home/anthony/Escritorio/repositorios/pooii-tarea-1-entrega-14-04-warleon/src/Integer/Integer.h
+iostream
+-
+
+/home/anthony/Escritorio/repositorios/pooii-tarea-1-entrega-14-04-warleon/src/Number/Number.cpp
+Number.h
+/home/anthony/Escritorio/repositorios/pooii-tarea-1-entrega-14-04-warleon/src/Number/Number.h
+
+/home/anthony/Escritorio/repositorios/pooii-tarea-1-entrega-14-04-warleon/src/Number/Number.h
+iostream
+-
+
+/home/anthony/Escritorio/repositorios/pooii-tarea-1-entrega-14-04-warleon/src/main.cpp
+tipos.h
+/home/anthony/Escritorio/repositorios/pooii-tarea-1-entrega-14-04-warleon/src/tipos.h
+
+/home/anthony/Escritorio/repositorios/pooii-tarea-1-entrega-14-04-warleon/src/myVector/myVector.cpp
+myVector.h
+/home/anthony/Escritorio/repositorios/pooii-tarea-1-entrega-14-04-warleon/src/myVector/myVector.h
+
+/home/anthony/Escritorio/repositorios/pooii-tarea-1-entrega-14-04-warleon/src/myVector/myVector.h
+
+/home/anthony/Escritorio/repositorios/pooii-tarea-1-entrega-14-04-warleon/src/tipos.h
+iostream
+-
+Integer/Integer.cpp
+/home/anthony/Escritorio/repositorios/pooii-tarea-1-entrega-14-04-warleon/src/Integer/Integer.cpp
+Number/Number.cpp
+/home/anthony/Escritorio/repositorios/pooii-tarea-1-entrega-14-04-warleon/src/Number/Number.cpp
+myVector/myVector.cpp
+/home/anthony/Escritorio/repositorios/pooii-tarea-1-entrega-14-04-warleon/src/myVector/myVector.cpp
+
